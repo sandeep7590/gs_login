@@ -18,6 +18,9 @@ export class RegisterPage {
     this.authService.register(this.regData).then((result) => {
       this.loading.dismiss();
       this.navCtrl.pop();
+console.log(result);
+
+
     }, (err) => {
       this.loading.dismiss();
       this.presentToast(err);

@@ -11,14 +11,18 @@ import { RegisterPage } from '../register/register';
 export class LoginPage {
 
   loading: any;
-  loginData = { username:'', password:'' };
+ // loginData = { mobileno:'' };
+     mobileno:any;
   data: any;
 
   constructor(public navCtrl: NavController, public authService: AuthService, public loadingCtrl: LoadingController, private toastCtrl: ToastController) {}
 
   doLogin() {
-    this.showLoader();
-    this.authService.login(this.loginData).then((result) => {
+  //  this.showLoader();
+  console.log(this.mobileno);
+    this.authService.login(this.mobileno).then((result) => {
+    alert("sandeep ");
+    console.log(result);
       this.loading.dismiss();
       this.data = result;
       localStorage.setItem('token', this.data.access_token);

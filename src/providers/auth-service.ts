@@ -3,6 +3,7 @@ import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 let apiUrl = 'http://192.168.1.11/blog/public/user_register';
+let apiUrl_mobile="http://192.168.1.11/appservice/public/sent_otp"
 
 @Injectable()
 export class AuthService {
@@ -15,12 +16,19 @@ export class AuthService {
         headers.append('Content-Type', 'application/json');
 
 
-        this.http.post(apiUrl+'login', JSON.stringify(credentials), {headers: headers})
-          .subscribe(res => {
-            resolve(res.json());
-          }, (err) => {
-            reject(err);
-          });
+//        this.http.post(apiUrl_mobile, JSON.stringify(credentials), {headers: headers})
+//          .subscribe(res => {
+//            resolve(res.json());
+//          }, (err) => {
+ //           reject(err);
+ //         });
+
+
+ this.http.get('http://192.168.1.11/appservice/public/sent_otp/'+credentials).map(res => res.json()).subscribe(data => {
+       // this.posts = data;
+        console.log(data);
+        alert(data);
+    });
     });
   }
 
