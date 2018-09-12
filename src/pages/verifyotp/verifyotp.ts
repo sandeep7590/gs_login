@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { RegisterPage } from '../register/register';
+
 
 
 /*
@@ -27,7 +29,8 @@ otpvalue:string;
   console.log('optvalue: ',this.otpvalue);
   console.log('opt1: ',this.otp1);
   if(this.otpvalue.match(this.opt1)){
-   console.log('value match sucessfully');
+   
+   this.navCtrl.push(RegisterPage);
 
   }else{
 

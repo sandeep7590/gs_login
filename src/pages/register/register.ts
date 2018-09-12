@@ -13,6 +13,7 @@ export class RegisterPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: AuthService, public loadingCtrl: LoadingController, private toastCtrl: ToastController) {}
 
+
   doSignup() {
     this.showLoader();
     this.authService.register(this.regData).then((result) => {

@@ -56,19 +56,20 @@ loading: any;
        if(data.status==='1'){
        //user not register send to veryfyotp page page with otp
   
+  console.log(data.otp);
         this.navCtrl.push(VerifyotpPage,{
-        item:this.data.otp});
+        item: data.otp});
 
 
       }else if(data.status==='2'){
        //user already registerd  go to dashboard
-alert('Registered user');
+         alert('Registered user');
 
 
        }
        else if(data.status==='0'){
 
-alert('Some error occured please try later');
+          alert('Some error occured please try later');
        }
        
      
