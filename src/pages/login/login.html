@@ -1,16 +1,27 @@
 <ion-content padding>
-  <h2>Enter Your Mobile Number</h2>
-  <form (submit)="doLogin()">
-    <ion-item>
-      <ion-label stacked>Mobile No.</ion-label>
-      <ion-input [(ngModel)]="mobileno" name="mobileno" type="text" placeholder="Enter your mobile" ></ion-input>
-    </ion-item>
-    <button ion-button block type="submit">
-      Submit
-    </button>
-  </form>
 
-  <button ion-button block clear (click)="register()">
-    No have an account? Register Now
+  
+   <ion-card>
+
+  <ion-card-content>
+   <button ion-button full  (click)="athlete()">
+    Athlete
   </button>
+  </ion-card-content>
+
+</ion-card>
+
+<ion-card>
+
+  <ion-card-content>
+    <button ion-button full  (click)="parent()">
+   Parent
+  </button>
+  </ion-card-content>
+
+</ion-card>
+  
+ 
+
+  
 </ion-content>

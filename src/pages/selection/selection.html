@@ -7,25 +7,26 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>selection</ion-title>
+    <ion-title>Enter your Mobile no</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
-	<ion-item>
-     
-    <button ion-button block type="athlete">
-      Athlete
+  <h2>Enter Your Mobile Number</h2>
+  <form (submit)="doLogin()">
+    <ion-item>
+      <ion-label stacked>Mobile No.</ion-label>
+      <ion-input [(ngModel)]="mobileno" name="mobileno" type="text" placeholder="Enter your mobile" ></ion-input>
+    </ion-item>
+    <button ion-button block type="submit">
+      Submit
     </button>
-</ion-item>
-<ion-item>
-     
-    <button ion-button block type="parent">
-      Parent
-    </button>
-</ion-item>
+  </form>
 
+  <button ion-button block clear (click)="register()">
+    No have an account? Register Now
+  </button>
 </ion-content>
+
