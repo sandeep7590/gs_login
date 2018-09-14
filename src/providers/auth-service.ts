@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-let apiUrl = 'http://192.168.1.11/blog/public/user_register';
+let apiUrl = 'http://192.168.1.11/appservice/public/user_access';
 let apiUrl_mobile="http://192.168.1.11/appservice/public/sent_otp"
 
 @Injectable()

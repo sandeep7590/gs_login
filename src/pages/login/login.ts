@@ -4,6 +4,8 @@ import { AuthService } from '../../providers/auth-service';
 import { Http, Headers } from '@angular/http';
 import { TabsPage } from '../tabs/tabs';
 import { SelectionPage } from '../selection/selection';
+import { RegisterPage } from '../register/register';
+
 
 
 @Component({
@@ -25,7 +27,7 @@ export class LoginPage {
   }
 
   parent(){
-  this.navCtrl.push(SelectionPage);
+   this.navCtrl.push(RegisterPage);
   }
 
 

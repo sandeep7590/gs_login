@@ -3,11 +3,13 @@
   <form (submit)="doSignup()">
       <ion-item>
         <ion-label>Name</ion-label>
-        <ion-input type="text" [(ngModel)]="regData.name" name="name"></ion-input>
+        <ion-input type="text" [(ngModel)]="regData.name" type="name" name="name"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Dob</ion-label>
         <ion-textarea [(ngModel)]="regData.dob" name="dob"></ion-textarea>
+         <!--  <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="regData.dob"></ion-datetime> -->
+
        </ion-item>
        <ion-item>
         <ion-label>Gender</ion-label>
@@ -15,11 +17,11 @@
       </ion-item>
       <ion-item>
         <ion-label>Email</ion-label>
-        <ion-textarea [(ngModel)]="regData.email" name="email"></ion-textarea>
+        <ion-textarea [(ngModel)]="regData.email" type="email" name="email"></ion-textarea>
       </ion-item>
        <ion-item>
         <ion-label>Mobile</ion-label>
-        <ion-textarea [(ngModel)]="regData.mobileno" name="mobileno"></ion-textarea>
+        <ion-textarea [(ngModel)]="regData.phone" name="mobileno"></ion-textarea>
       </ion-item>
           <button ion-button block type="submit">
       Submit

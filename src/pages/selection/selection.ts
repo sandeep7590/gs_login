@@ -56,25 +56,30 @@ loading: any;
        if(data.status==='1'){
        //user not register send to veryfyotp page page with otp
   
-  console.log(data.otp);
+  
         this.navCtrl.push(VerifyotpPage,{
-        item: data.otp});
+        item: data.otp,param2:'No'});
 
 
       }else if(data.status==='2'){
        //user already registerd  go to dashboard
-         alert('Registered user');
+         
+
+          this.navCtrl.push(VerifyotpPage,{
+          item: data.otp, param2:'Yes'});
+
 
 
        }
        else if(data.status==='0'){
 
           alert('Some error occured please try later');
+       }else if(data==='0'){
+         this.loading.dismiss();
+         alert('Some error occured please try later');
+
        }
-       
-     
-  
-    });
+      });
     
   }
 
